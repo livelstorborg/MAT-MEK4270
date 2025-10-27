@@ -1,0 +1,1 @@
+[![MAT-MEK4270 mandatory 1](https://github.com/livelstorborg/MAT-MEK4270/actions/workflows/mandatory1.yml/badge.svg?branch=main)](https://github.com/livelstorborg/MAT-MEK4270/actions/workflows/mandatory1.yml)

@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mandatory2"
+version = "0.1.0"
+description = "1D spectral Galerkin scaffolding for ODE/PDEs on an interval"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+  { name = "MATMEK-4270 course" }
+]
+dependencies = [
+  "numpy>=1.26",
+  "scipy>=1.11",
+  "sympy>=1.12"
+]
+
+[tool.setuptools]
+# Treat the top-level scripts as modules so they can be imported if desired
+py-modules = [
+  "galerkin"
+]
