@@ -1,28 +1,25 @@
-name: CI - mandatory1
-
+name: MAT-MEK4270 mandatory 1
 on:
   push:
-    paths:
-      - 'mandatory1/**'
+    branches: [ "**" ]
   pull_request:
-    paths:
-      - 'mandatory1/**'
-
+    branches: [ "main" ]
+permissions:
+  contents: read
 jobs:
   build:
-    name: Run CI for mandatory1
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-      - name: Set up Python
-        uses: actions/setup-python@v4
-        with:
-          python-version: '3.10'
-      - name: Install dependencies (if any)
-        run: |
-          python -m pip install --upgrade pip
-          if [ -f mandatory1/requirements.txt ]; then pip install -r mandatory1/requirements.txt; fi
-      - name: Quick sanity check
-        run: |
-          echo "CI for mandatory1"
-          python -c "import sys; print(sys.version)"
+    - uses: actions/checkout@v3
+    - name: Set up Python 3.10
+      uses: actions/setup-python@v3
+      with:
+        python-version: "3.10"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install pytest numpy sympy matplotlib scipy
+    - name: Test with pytest
+      working-directory: ./mandatory1
+      run: |
+        pytest *.py
