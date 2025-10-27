@@ -1,6 +1,8 @@
 # MAT-MEK4270: Numerical Methods for Partial Differential Equations
 
 [![MAT-MEK4270 mandatory 1](https://github.com/livelstorborg/MAT-MEK4270/actions/workflows/mandatory1.yml/badge.svg?branch=main)](https://github.com/livelstorborg/MAT-MEK4270/actions/workflows/mandatory1.yml)
+
+
 [![MAT-MEK4270 mandatory 2](https://github.com/livelstorborg/MAT-MEK4270/actions/workflows/mandatory2.yml/badge.svg?branch=main)](https://github.com/livelstorborg/MAT-MEK4270/actions/workflows/mandatory2.yml)
 
 This repository contains mandatory assignments for MAT-MEK4270.
