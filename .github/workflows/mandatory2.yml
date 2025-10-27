@@ -1,0 +1,28 @@
+name: CI - mandatory2
+
+on:
+  push:
+    paths:
+      - 'mandatory2/**'
+  pull_request:
+    paths:
+      - 'mandatory2/**'
+
+jobs:
+  build:
+    name: Run CI for mandatory2
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Install dependencies (if any)
+        run: |
+          python -m pip install --upgrade pip
+          if [ -f mandatory2/requirements.txt ]; then pip install -r mandatory2/requirements.txt; fi
+      - name: Quick sanity check
+        run: |
+          echo "CI for mandatory2"
+          python -c "import sys; print(sys.version)"
